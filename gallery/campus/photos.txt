@@ -1,0 +1,5 @@
+# List one photo filename per line — files must sit in this same "campus" folder.
+# Lines starting with # are ignored. Delete the example lines below and add your own.
+# example1.jpg
+# example2.jpg
+thumbnail.jpg
