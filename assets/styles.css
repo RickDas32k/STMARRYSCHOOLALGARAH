@@ -446,9 +446,11 @@ nav.primary-nav a.active{color:var(--forest-deep);background:var(--cream);}
 
 /* ===== Lightbox ===== */
 .lightbox{
+  display:none;
   position:fixed;inset:0;background:rgba(7,27,48,.92);z-index:300;
-  display:flex;align-items:center;justify-content:center;padding:24px;
+  align-items:center;justify-content:center;padding:24px;
 }
+.lightbox:not([hidden]){display:flex;}
 .lightbox img{
   max-width:100%;max-height:90vh;display:block;border-radius:4px;
 }
