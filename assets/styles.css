@@ -430,19 +430,33 @@ nav.primary-nav a.active{color:var(--forest-deep);background:var(--cream);}
   display:block;padding:0 16px 16px;color:var(--ink-soft);font-size:0.85rem;
 }
 
-/* ===== Gallery: Pinterest-style masonry, zero gap ===== */
+/* ===== Gallery: Pinterest-style masonry, 8px gap ===== */
 .masonry{
-  column-count:4;column-gap:0;
+  column-count:4;column-gap:8px;
 }
 .masonry-item{
-  margin:0;padding:0;break-inside:avoid;display:block;
+  margin:0 0 8px;padding:0;break-inside:avoid;display:block;
 }
 .masonry-item img{
-  display:block;width:100%;height:auto;margin:0;padding:0;cursor:zoom-in;
+  display:block;width:100%;height:auto;margin:0;padding:0;cursor:zoom-in;border-radius:4px;
 }
 @media (max-width:960px){ .masonry{column-count:3;} }
 @media (max-width:640px){ .masonry{column-count:2;} }
 @media (max-width:400px){ .masonry{column-count:2;} }
+
+/* ===== Home page: principal photo caption overlay ===== */
+.photo-wrap--caption{position:relative;}
+.photo-caption{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(to top, rgba(7,27,48,.88) 0%, rgba(7,27,48,.55) 60%, transparent 100%);
+  color:#fff;padding:28px 16px 14px;text-align:center;
+}
+.photo-caption strong{
+  display:block;font-family:"Fraunces",serif;font-weight:600;font-size:1rem;
+}
+.photo-caption span{
+  display:block;font-size:0.82rem;color:#DCE9DF;margin-top:2px;
+}
 
 /* ===== Lightbox ===== */
 .lightbox{
