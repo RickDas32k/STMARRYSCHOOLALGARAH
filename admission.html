@@ -176,7 +176,130 @@
           </li>
         </ul>
       </div>
-      <p class="form-note" style="margin-top:24px;">Exact opening dates, seat counts and fee figures for 2027-28 to be confirmed by the office and added here.</p>
+    </div>
+  </section>
+
+  <section class="section-alt" aria-labelledby="age-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 id="age-h">Minimum age for admission</h2>
+        <p>Under the National Education Policy 2020, a child must have completed <strong>6 years of age</strong> to enter Class I. Age is counted as on 31 March of the year the session begins.</p>
+      </div>
+
+      <ol class="age-ladder reveal-group">
+        <li>
+          <span class="age-stage">Nursery</span>
+          <span class="age-num"><span class="count" data-to="3">3</span>+</span>
+          <span class="age-note">Completed 3 years</span>
+        </li>
+        <li>
+          <span class="age-stage">LKG</span>
+          <span class="age-num"><span class="count" data-to="4">4</span>+</span>
+          <span class="age-note">Completed 4 years</span>
+        </li>
+        <li>
+          <span class="age-stage">UKG</span>
+          <span class="age-num"><span class="count" data-to="5">5</span>+</span>
+          <span class="age-note">Completed 5 years</span>
+        </li>
+        <li class="age-key">
+          <span class="age-stage">Class I</span>
+          <span class="age-num"><span class="count" data-to="6">6</span>+</span>
+          <span class="age-note">Completed 6 years, NEP 2020 norm</span>
+        </li>
+      </ol>
+
+      <div class="notice reveal">
+        <p><strong>For the 2027-28 session</strong>, a child joining Class I must be born on or before 31 March 2021.</p>
+        <p>CBSE does not set one single all-India age rule. For admission up to Class VIII, affiliated schools follow the rules of their State or Union Territory, and the exact cut-off date can vary. Families should confirm their child's eligibility with the school office before applying.</p>
+      </div>
+
+      <p class="form-note">For admission to a class above Class I, the child's age should be the Class I minimum plus one year for each year of schooling in between.</p>
+    </div>
+  </section>
+
+  <section id="fees" aria-labelledby="fees-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 id="fees-h">Fee structure</h2>
+        <p>Select a class to see its fees. All figures are in Indian rupees.</p>
+      </div>
+
+      <div class="fee-explorer reveal">
+        <div class="fee-tabs" role="tablist" aria-label="Select a class to view its fees">
+          <button role="tab" class="fee-tab is-active" aria-selected="true" data-class="I">I</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="II">II</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="III">III</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="IV">IV</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="V">V</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="VI">VI</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="VII">VII</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="VIII">VIII</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="IX">IX</button>
+          <button role="tab" class="fee-tab" aria-selected="false" data-class="X">X</button>
+        </div>
+
+        <div class="fee-panel" id="feePanel" role="tabpanel" aria-live="polite">
+          <p class="fee-panel-title">Class <span id="feeClassName">I</span></p>
+
+          <div class="fee-heads">
+            <div class="fee-head">
+              <span class="fee-label">Admission fee</span>
+              <span class="fee-value">&#8377;<span class="count" data-key="admission">0</span></span>
+            </div>
+            <div class="fee-head">
+              <span class="fee-label">Session fee</span>
+              <span class="fee-value">&#8377;<span class="count" data-key="session">0</span></span>
+            </div>
+            <div class="fee-head">
+              <span class="fee-label">Computer fee</span>
+              <span class="fee-value">&#8377;<span class="count" data-key="computer">0</span></span>
+            </div>
+            <div class="fee-head">
+              <span class="fee-label">Examination fee</span>
+              <span class="fee-value">&#8377;<span class="count" data-key="exam">0</span></span>
+            </div>
+            <div class="fee-head">
+              <span class="fee-label">Games and sports fee</span>
+              <span class="fee-value">&#8377;<span class="count" data-key="games">0</span></span>
+            </div>
+          </div>
+
+          <div class="fee-totals">
+            <div class="fee-total">
+              <span class="fee-label">Total of the above heads</span>
+              <span class="fee-value fee-value--lg">&#8377;<span class="count" data-key="total">0</span></span>
+            </div>
+            <div class="fee-total fee-total--accent">
+              <span class="fee-label">Monthly tuition fee</span>
+              <span class="fee-value fee-value--lg">&#8377;<span class="count" data-key="tuition">0</span><span class="fee-per">per month</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <details class="fee-table-wrap reveal">
+        <summary>View all classes as a table</summary>
+        <div class="table-scroll">
+          <table class="fee-table">
+            <caption class="visually-hidden">Fee structure for Classes I to X, in Indian rupees</caption>
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Admission</th>
+                <th scope="col">Session</th>
+                <th scope="col">Computer</th>
+                <th scope="col">Examination</th>
+                <th scope="col">Games and sports</th>
+                <th scope="col">Monthly tuition</th>
+              </tr>
+            </thead>
+            <tbody id="feeTableBody"></tbody>
+          </table>
+        </div>
+      </details>
+
+      <p class="form-note">Fees shown are for Classes I to X. Figures for Nursery, LKG and UKG, and the schedule for when each head is payable, are to be confirmed by the school office.</p>
     </div>
   </section>
 
@@ -205,7 +328,7 @@
       <div>
         <h4>Disclosures</h4>
         <ul>
-          <li><a href="disclosures.html">Fee structure</a></li>
+          <li><a href="admission.html#fees">Fee structure</a></li>
           <li><a href="disclosures.html">Staff details</a></li>
           <li><a href="disclosures.html">Result percentage</a></li>
           <li><a href="disclosures.html">All disclosures</a></li>
